@@ -1,13 +1,19 @@
 {
   "scripts": {
-    "test": "mocha --exit",
-    "coverage": "nyc npm test -- --exit && nyc report --reporter=text-lcov > coverage/lcov.info"
+    "test": "mocha --recursive ./test --exit",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
     "chai": "^4.3.10",
     "coveralls": "^3.1.1",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "reporter": ["text", "lcov"],
+    "include": ["src/**/*.js"],
+    "exclude": ["test/**/*.js"],
+    "all": true
   },
   "type": "module"
 }

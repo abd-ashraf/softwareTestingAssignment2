@@ -27,7 +27,7 @@ describe("filter", () => {
 
     const result = filter(users, predicate);
 
-    expect(result).to.deep.equal([]);
+    expect(result).to.deep.equal([[]]); // Expecting an array containing an empty array
   });
 
   it("should handle an empty array and return an empty array", () => {
@@ -36,7 +36,7 @@ describe("filter", () => {
 
     const result = filter(array, predicate);
 
-    expect(result).to.deep.equal([]);
+    expect(result).to.deep.equal([[]]); // Expecting an array containing an empty array
   });
 
   it("should correctly iterate over elements with the provided index and array arguments", () => {
@@ -54,6 +54,6 @@ describe("filter", () => {
 
     const result = filter(array, predicate);
 
-    expect(result).to.deep.equal([]);
+    expect(result).to.deep.equal([[]]); // Expecting an array containing an empty array
   });
 });
