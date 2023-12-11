@@ -23,4 +23,4 @@ jobs:
       uses: coverallsapp/github-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        repo-name: 'abd-ashraf/softwareTestingAssignment2'
+        repo-token: 'vH1on35omlUdAVxjv9BGAQ6EANj454fWJ'
