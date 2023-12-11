@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "mocha --recursive ./test --exit",
+    "test": "mocha --recursive ./test --exit ",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
