@@ -1,35 +1,25 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: CI Pipeline
-
-# trigger build when pushing, or when creating a pull request
 on: [push, pull_request]
+
+name: Test Coveralls
 
 jobs:
   build:
-
-    # run build on latest ubuntu
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    # this will check out the current branch (https://github.com/actions/checkout#Push-a-commit-using-the-built-in-token)
-    - uses: actions/checkout@v3
-    # installing Node
-    - name: Use Node.js 16.16.0
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
-        # this will use the latest Node 16 version
-        node-version: 16.16.0
-    # install dependencies using clean install to avoid package lock updates
-    - run: npm install
-    # build the project if necessary
-    - run: npm run build --if-present
-    # finally run the tests
-    - run: npm run coverage
+        node-version: 16.x
 
-    # Save coverage report in Coveralls
+    - name: npm install and test coverage
+      run: |
+        npm install
+        npm run coverage
+
     - name: Coveralls
-      uses: coverallsapp/github-action@master
+      uses: coverallsapp/github-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
