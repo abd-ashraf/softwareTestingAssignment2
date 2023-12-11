@@ -50,9 +50,9 @@ describe("castArray", () => {
     expect(result).to.deep.equal([undefined]);
   });
 
-  it("should return an array with undefined if no value is provided", () => {
+  it("should return an empty array if no value is provided", () => {
     const result = castArray();
-    expect(result).to.deep.equal([undefined]);
+
+    expect(result).to.deep.equal([]);
   });
-  
 });

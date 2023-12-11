@@ -22,13 +22,12 @@ describe("map", () => {
 
   it("should correctly iterate over elements with the provided index and array arguments", () => {
     const array = [2, 4, 6, 8];
-    const multiply = (value, index, arr) => index === 0 ? 0 : value * arr[index - 1]; // Adjusting the function to handle the first element
-  
+    const multiply = (value, index, arr) => value * arr[index - 1];
+
     const result = map(array, multiply);
-  
-    expect(result).to.deep.equal([0, 8, 24, 48]); // Expecting the first element to be 0 due to the adjustment
+
+    expect(result).to.deep.equal([0, 8, 24, 48]);
   });
-  
 
   it("should handle an array with only falsey values and return an array of falsey values", () => {
     const array = [null, 0, false];

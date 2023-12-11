@@ -32,7 +32,7 @@ describe("endsWith", () => {
 
   it("should handle position less than 0 by treating it as 0", () => {
     const string = "abc";
-    const target = ""; 
+    const target = "c";
     const position = -1;
 
     const result = endsWith(string, target, position);
@@ -52,8 +52,8 @@ describe("endsWith", () => {
 
   it("should handle position as NaN by treating it as 0", () => {
     const string = "abc";
-    const target = "abc";
-    const position = undefined;
+    const target = "c";
+    const position = NaN;
 
     const result = endsWith(string, target, position);
 

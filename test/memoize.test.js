@@ -64,10 +64,9 @@ describe("memoize", () => {
     const memoizedGetValue = memoize(getValue);
 
     const result1 = memoizedGetValue.call(obj1);
-    // Adjusted to expect the same result as the first call due to memoization
     const result2 = memoizedGetValue.call(obj2);
 
     expect(result1).to.equal(42);
-    expect(result2).to.equal(42); // Expecting the same result as the first call
+    expect(result2).to.equal(100);
   });
 });

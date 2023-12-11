@@ -6,10 +6,11 @@ describe("clamp", () => {
     const number = 5;
     const lower = 1;
     const upper = 10;
+
     const result = clamp(number, lower, upper);
-    // Expecting the lower value due to the bug in the function
-    expect(result).to.equal(lower);
-  });  
+
+    expect(result).to.equal(5);
+  });
 
   it("should clamp a number below the lower bound to the lower bound", () => {
     const number = 0;
@@ -25,34 +26,39 @@ describe("clamp", () => {
     const number = 15;
     const lower = 1;
     const upper = 10;
+
     const result = clamp(number, lower, upper);
-    expect(result).to.not.equal(10);
+
+    expect(result).to.equal(10);
   });
-  
 
   it("should handle negative numbers", () => {
     const number = -5;
     const lower = -10;
     const upper = 0;
-  
+
     const result = clamp(number, lower, upper);
-    // Expecting the lower bound due to the bug in the function
-    expect(result).to.equal(lower);
-  });  
+
+    expect(result).to.equal(-5);
+  });
 
   it("should handle NaN values by treating them as 0", () => {
     const number = NaN;
     const lower = 1;
     const upper = 10;
+
     const result = clamp(number, lower, upper);
-    expect(result).to.not.equal(0);
+
+    expect(result).to.equal(0);
   });
 
   it("should handle undefined values by treating them as 0", () => {
     const number = undefined;
     const lower = 1;
     const upper = 10;
+
     const result = clamp(number, lower, upper);
-    expect(result).to.not.equal(0);
-  });  
+
+    expect(result).to.equal(0);
+  });
 });
