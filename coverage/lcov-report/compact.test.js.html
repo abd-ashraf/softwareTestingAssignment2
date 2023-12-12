@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/26</span>
+                <span class='fraction'>0/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/25</span>
+                <span class='fraction'>0/21</span>
             </div>
         
             
@@ -107,32 +107,24 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -153,10 +145,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { expect } from "chai";
@@ -164,24 +156,20 @@ import compact from "../src/compact.js";
 &nbsp;
 <span class="cstat-no" title="statement not covered" >describe("compact", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  it("should remove all falsey values from the array", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-    const inputArray = <span class="cstat-no" title="statement not covered" >[0, 1, false, 2, '', 3];</span>
+    const inputArray = <span class="cstat-no" title="statement not covered" >[0, 1, false, 2, "", 3];</span>
+&nbsp;
     const result = <span class="cstat-no" title="statement not covered" >compact(inputArray);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.include.members([2, 3]);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.not.include.members([0, false, '', 1]);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.deep.equal([1, 2, 3]);</span>
   });
-  
-  
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  it("should handle arrays with mixed truthy and falsey values", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const inputArray = <span class="cstat-no" title="statement not covered" >[false, null, 0, "", undefined, NaN, "hello", true, 42];</span>
+&nbsp;
     const result = <span class="cstat-no" title="statement not covered" >compact(inputArray);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.include.members([true, 42]);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.not.include.members([false, null, 0, "", undefined, NaN]);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result.length).to.equal(2); </span>// Adjusting the expectation for the length of the array
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.deep.equal(["hello", true, 42]);</span>
   });
-  
-  
-  
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  it("should handle an array with only falsey values", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const inputArray = <span class="cstat-no" title="statement not covered" >[false, null, 0, "", undefined, NaN];</span>
@@ -201,11 +189,11 @@ import compact from "../src/compact.js";
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  it("should handle an array with all truthy values", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const inputArray = <span class="cstat-no" title="statement not covered" >[1, "hello", true, {}];</span>
-    const result = <span class="cstat-no" title="statement not covered" >compact(inputArray);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.include.members(["hello", true]); </span>// Check for specific truthy values
-<span class="cstat-no" title="statement not covered" >    expect(result.some(<span class="fstat-no" title="function not covered" >it</span>em =&gt; <span class="cstat-no" title="statement not covered" >typeof item === 'object' &amp;&amp; item !== null)</span>).to.be.true; </span>// Check for an object presence
-  });
 &nbsp;
+    const result = <span class="cstat-no" title="statement not covered" >compact(inputArray);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.deep.equal([1, "hello", true, {}]);</span>
+  });
 });
 &nbsp;</pre></td></tr></table></pre>
 
@@ -214,7 +202,7 @@ import compact from "../src/compact.js";
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-11T20:16:11.703Z
+                at 2023-12-12T10:00:45.513Z
             </div>
         <script src="prettify.js"></script>
         <script>

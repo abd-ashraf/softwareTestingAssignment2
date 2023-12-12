@@ -121,19 +121,16 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -142,15 +139,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -167,7 +155,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,7 +165,29 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -187,10 +199,11 @@ import clamp from "../src/clamp.js";
     const number = <span class="cstat-no" title="statement not covered" >5;</span>
     const lower = <span class="cstat-no" title="statement not covered" >1;</span>
     const upper = <span class="cstat-no" title="statement not covered" >10;</span>
+&nbsp;
     const result = <span class="cstat-no" title="statement not covered" >clamp(number, lower, upper);</span>
-    // Expecting the lower value due to the bug in the function
-<span class="cstat-no" title="statement not covered" >    expect(result).to.equal(lower);</span>
-  });  
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.equal(5);</span>
+  });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  it("should clamp a number below the lower bound to the lower bound", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const number = <span class="cstat-no" title="statement not covered" >0;</span>
@@ -206,36 +219,41 @@ import clamp from "../src/clamp.js";
     const number = <span class="cstat-no" title="statement not covered" >15;</span>
     const lower = <span class="cstat-no" title="statement not covered" >1;</span>
     const upper = <span class="cstat-no" title="statement not covered" >10;</span>
+&nbsp;
     const result = <span class="cstat-no" title="statement not covered" >clamp(number, lower, upper);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.not.equal(10);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.equal(10);</span>
   });
-  
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  it("should handle negative numbers", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const number = <span class="cstat-no" title="statement not covered" >-5;</span>
     const lower = <span class="cstat-no" title="statement not covered" >-10;</span>
     const upper = <span class="cstat-no" title="statement not covered" >0;</span>
-  
+&nbsp;
     const result = <span class="cstat-no" title="statement not covered" >clamp(number, lower, upper);</span>
-    // Expecting the lower bound due to the bug in the function
-<span class="cstat-no" title="statement not covered" >    expect(result).to.equal(lower);</span>
-  });  
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.equal(-5);</span>
+  });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  it("should handle NaN values by treating them as 0", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const number = <span class="cstat-no" title="statement not covered" >NaN;</span>
     const lower = <span class="cstat-no" title="statement not covered" >1;</span>
     const upper = <span class="cstat-no" title="statement not covered" >10;</span>
+&nbsp;
     const result = <span class="cstat-no" title="statement not covered" >clamp(number, lower, upper);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.not.equal(0);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.equal(0);</span>
   });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  it("should handle undefined values by treating them as 0", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
     const number = <span class="cstat-no" title="statement not covered" >undefined;</span>
     const lower = <span class="cstat-no" title="statement not covered" >1;</span>
     const upper = <span class="cstat-no" title="statement not covered" >10;</span>
+&nbsp;
     const result = <span class="cstat-no" title="statement not covered" >clamp(number, lower, upper);</span>
-<span class="cstat-no" title="statement not covered" >    expect(result).to.not.equal(0);</span>
-  });  
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    expect(result).to.equal(0);</span>
+  });
 });
 &nbsp;</pre></td></tr></table></pre>
 
@@ -244,7 +262,7 @@ import clamp from "../src/clamp.js";
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-11T20:16:11.703Z
+                at 2023-12-12T10:00:45.513Z
             </div>
         <script src="prettify.js"></script>
         <script>
